@@ -7,7 +7,7 @@ namespace NetCoreMVCFundemantals.Controllers
   {
 
     [HttpGet("kategoriler")]
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     
     {
       // model oluşturduk

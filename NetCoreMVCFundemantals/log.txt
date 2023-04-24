@@ -1,0 +1,17 @@
+Host => localhost:7271 Method: GET Url /
+Host => localhost:7271 Method: GET Url /kategori-ekle
+Host => localhost:7271 Method: POST Url /kategori-ekleHost => localhost:7271 Method: GET Url / 
+Host => localhost:7271 Method: GET Url /Home/Privacy 
+Host => localhost:7271 Method: GET Url / 
+Host => localhost:7271 Method: GET Url /Home/Privacy 
+Host => localhost:7271 Method: GET Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /kategori-ekle 

@@ -35,10 +35,29 @@ namespace NetCoreMVCFundemantals.Controllers
     // formdan veri gönderme işlemleri için HTTPPOST, Silme,Güncelleme,Kayıt,Ekleme
     // attribute routing
     // yönlendirme linki
+    // route yönlendirme (kebap-case) tercih ederiz
+    // 
     [HttpPost("kategori-ekle", Name = "kategoriEkle")]
     public IActionResult CreateCategory(CategoryCreateInputModel model)
     {
-      // db işlemleri yapılır.
+      if(ModelState.IsValid)
+      {
+        
+        bool isExist = true;
+        if(isExist)
+        {
+          ModelState.AddModelError("Name", "Aynı");
+        }
+        else
+        {
+          // db işlemleri yapılır.
+
+          // dbden aynı isimde kategori var mı yokmuş kontrolü yapılır. aynı isimde kategori varsa burada hata verebilir.
+        }
+
+      }
+      
+
       return View();
     }
 

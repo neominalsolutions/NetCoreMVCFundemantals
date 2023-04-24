@@ -1,0 +1,20 @@
+﻿@model CategoryCreateInputModel
+
+
+@*built-in net core forms tag helper anchor *@
+@*html 5 validasyonları kapadık novalidate attribute*@
+<form novalidate method="post" asp-action="CreateCategory" asp-controller="Category">
+  @*tüm hataları tek bir liste halinde göstermemizi sağlar. *@
+  <div asp-validation-summary="All"></div>
+  @*asp-for modelin hangi propertysine bind olacağımız söyledik*@
+  <input asp-for="Name" class="form-control" placeholder="Kategori Adı"  />
+  @* validasyon hatalarını ekranda göstermek için asp-validation-for*@
+  <span asp-validation-for="Name"></span>
+  <br />
+  <textarea class="form-control" cols="12" rows="10" asp-for="Description" placeholder="Açıklaması"></textarea>
+  <span asp-validation-for="Description"></span>
+  <br />
+  <input class="btn btn-success" type="submit" value="Kaydet" />
+</form>
+
+

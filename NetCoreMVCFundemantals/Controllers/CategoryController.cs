@@ -22,5 +22,27 @@ namespace NetCoreMVCFundemantals.Controllers
 
       return View(clist);
     }
+
+    // Sayfanın ekran çıktısı vermemsi için HTTPGET yöntemini kullanıyoruz
+
+    [HttpGet("kategori-ekle")]
+    public IActionResult CreateCategory()
+    {
+      return View();
+    }
+
+    // formdan veri gönderme işlemleri için HTTPPOST, Silme,Güncelleme,Kayıt,Ekleme
+    // attribute routing
+    // yönlendirme linki
+    [HttpPost("kategori-ekle")]
+    public IActionResult CreateCategory(CategoryCreateInputModel model)
+    {
+      // db işlemleri yapılır.
+      return View();
+    }
+
+
+
+
   }
 }

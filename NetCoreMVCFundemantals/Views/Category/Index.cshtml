@@ -1,0 +1,36 @@
+﻿@*Razor view Engine*@
+
+@model IEnumerable<CategoryViewModel>
+
+@{
+
+  string title = "Anasayfa";
+ 
+}
+
+@*Eğer actiondan view'e' gönderilen modele bağlanmak istersek Model keyword kullanıyoruz*@
+@* Model Binding *@
+
+<ul>
+  @foreach (CategoryViewModel item in Model)
+  {
+
+
+  if(item != null)
+    {
+      @*<li>@(item is not null ? item.Name : "null")</li>*@
+      @* Shorthand ile null kontrolü ve veri yazdırma işlemi *@
+
+      <li> @item?.Name?.ToUpper()  @item?.Description?.ToLower() </li>
+   }
+
+   @* attribute tanımlarında ternary if kullanımı *@
+
+   @* <a class='@item.Name == "Ali" ? "deneme":"deneme2" '>My link here</a>*@
+
+
+  } 
+</ul>
+
+
+<h1>@title</h1>

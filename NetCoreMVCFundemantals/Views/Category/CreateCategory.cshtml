@@ -3,7 +3,7 @@
 
 @*built-in net core forms tag helper anchor *@
 @*html 5 validasyonları kapadık novalidate attribute*@
-<form novalidate method="post" asp-action="CreateCategory" asp-controller="Category">
+<form novalidate method="post" asp-route="kategoriEkle">
   @*tüm hataları tek bir liste halinde göstermemizi sağlar. *@
   <div asp-validation-summary="All"></div>
   @*asp-for modelin hangi propertysine bind olacağımız söyledik*@

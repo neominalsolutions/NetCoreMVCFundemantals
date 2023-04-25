@@ -15,6 +15,8 @@ namespace NetCoreMVCFundemantals.Controllers
 
     public IActionResult Index()
     {
+      //var orderService = new OrderService(new TurkcelEmailService());
+      //orderService.SubmitOrder(model);
       return View();
     }
 

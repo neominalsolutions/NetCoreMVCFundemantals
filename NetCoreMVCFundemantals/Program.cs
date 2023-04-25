@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http;
+using NetCoreMVCFundemantals.DIServices;
 using NetCoreMVCFundemantals.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 //builder.Services.AddControllers();
 //builder.Services.AddRazorPages();
+
+// uygulamanýn merkezi olarak uygulama kullanýlan servislerin instancelarý yönetebiliriz. Net Core Dependency Injection kütüphanesi bunu yapar.
+// her sýnýf çaðýrýsýnda yeni bir instance al demek.
+builder.Services.AddTransient<OrderService>();
+// eðer uygulama içerisinde bir yerlerde email servis çaðýrýlýrsa turkcell servis instance döndürsün.
+builder.Services.AddTransient<IEmailService, TurkcellEmailService>();
+// not sadece servis çaðýrýsý yapacaðýmýz sýnýflarý burada otomatik instance aldýrýrýz. (ViewModel,InputModel,Entity) gibi sýnýflarýn instance yazýlýmcýý duruma göre kendisi alýr. Bu dýþýndaki tüm hizmetlere ait instancelarýn yönetimini ise net core devreder.
+
+// net core da servislerin yaþamlarýný instancelarýný yöntebileceðimiz IoC container özelliði mevcuttur.
 
 
 var app = builder.Build();
@@ -32,7 +42,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-"sadsadsadsad".UpperCaseFormat();
+//"sadsadsadsad".UpperCaseFormat();
 
 
 //app.UseCustomLogging();

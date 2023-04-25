@@ -15,3 +15,7 @@ Host => localhost:7271 Method: POST Url /kategori-ekle
 Host => localhost:7271 Method: POST Url /kategori-ekle 
 Host => localhost:7271 Method: POST Url /kategori-ekle 
 Host => localhost:7271 Method: POST Url /kategori-ekle 
+Host => localhost:7271 Method: POST Url /siparis-yap 
+Host => localhost:7271 Method: POST Url /siparis-yap 
+Host => localhost:7271 Method: POST Url /siparis-yap 
+Host => localhost:7271 Method: POST Url /siparis-yap 

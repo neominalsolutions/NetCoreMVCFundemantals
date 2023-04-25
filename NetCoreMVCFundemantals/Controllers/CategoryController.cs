@@ -40,7 +40,11 @@ namespace NetCoreMVCFundemantals.Controllers
     [HttpPost("kategori-ekle", Name = "kategoriEkle")]
     public IActionResult CreateCategory(CategoryCreateInputModel model)
     {
-      if(ModelState.IsValid)
+
+      //var orderService = new OrderService(new TurkcelEmailService());
+      //orderService.SubmitOrder(model);
+
+      if (ModelState.IsValid)
       {
         
         bool isExist = true;

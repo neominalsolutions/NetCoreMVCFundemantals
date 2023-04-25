@@ -2,12 +2,12 @@
 
 namespace NetCoreMVCFundemantals.DIServices
 {
-  public class OrderService
+  public class InternalOrderService:IOrderService
   {
     private IEmailService emailService;
 
     // Dependecy Injection ile emailService'e OrderService içerisinde email servisi çağırdık.
-    public OrderService(IEmailService emailService)
+    public InternalOrderService(IEmailService emailService)
     {
       this.emailService = emailService;
     }

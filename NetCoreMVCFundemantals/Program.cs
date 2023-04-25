@@ -11,9 +11,9 @@ builder.Services.AddControllersWithViews();
 
 // uygulamanýn merkezi olarak uygulama kullanýlan servislerin instancelarý yönetebiliriz. Net Core Dependency Injection kütüphanesi bunu yapar.
 // her sýnýf çaðýrýsýnda yeni bir instance al demek.
-builder.Services.AddTransient<OrderService>();
+builder.Services.AddTransient<IOrderService,InternalOrderService>();
 // eðer uygulama içerisinde bir yerlerde email servis çaðýrýlýrsa turkcell servis instance döndürsün.
-builder.Services.AddTransient<IEmailService, TurkcellEmailService>();
+builder.Services.AddTransient<IEmailService, VodafoneEmailService>();
 // not sadece servis çaðýrýsý yapacaðýmýz sýnýflarý burada otomatik instance aldýrýrýz. (ViewModel,InputModel,Entity) gibi sýnýflarýn instance yazýlýmcýý duruma göre kendisi alýr. Bu dýþýndaki tüm hizmetlere ait instancelarýn yönetimini ise net core devreder.
 
 // net core da servislerin yaþamlarýný instancelarýný yöntebileceðimiz IoC container özelliði mevcuttur.

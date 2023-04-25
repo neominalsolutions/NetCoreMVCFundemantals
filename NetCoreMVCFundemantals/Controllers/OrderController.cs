@@ -7,9 +7,9 @@ namespace NetCoreMVCFundemantals.Controllers
   // order işlemlerini yeni arayüzler üzerinden yöneteceğimiz bir controller açtık. tüm sipariş arayüzlerinden burası sorumlu, sipariş ile ilgili bir revize olduğundan sadece bu sınıfta bir operasyon yapıcaz. Single Responsibilty
   public class OrderController : Controller
   {
-    private OrderService orderService;
+    private IOrderService orderService;
 
-    public OrderController(OrderService orderService)
+    public OrderController(IOrderService orderService)
     {
       this.orderService = orderService;
     }
@@ -17,6 +17,9 @@ namespace NetCoreMVCFundemantals.Controllers
     [HttpGet("siparis-yap", Name = "SubmitOrder")]
     public IActionResult SubmitOrder()
     {
+      //var orderService = new OrderService(new TurkcelEmailService());
+      //orderService.SubmitOrder(model);
+
       return View();
     }
 
@@ -26,7 +29,7 @@ namespace NetCoreMVCFundemantals.Controllers
 
       orderService.SubmitOrder(model);
 
-      //var orderService = new OrderService(new VodafoneEmailService());
+      //var orderService = new OrderService(new TurkcelEmailService());
       //orderService.SubmitOrder(model);
 
       return View();
